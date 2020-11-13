@@ -1,34 +1,35 @@
 
-# # Challenge: Swap first and last characters in a string
-# # Ex: "the dog" => "ghe dot"
-# # "ABCD" => "DBCA"
-# # "WINDOWS" => "SINDOWW"
+# Challenge: Swap first and last characters in a string
+# Ex: "the dog" => "ghe dot"
+# "ABCD" => "DBCA"
+# "WINDOWS" => "SINDOWW"
+new_string = "Jacob"
+swapped_string = new_string[0:-1].replace('J', 'b') + new_string[0]
+print(swapped_string)
 
 
-# # Challenge: Reverse a word
-# # EX: "reverse" = "esrever"
 
 
-# dog_one = "Old Yeller"
-# dog_two = "Thor"
-# dog_three = "Mars"
+dog_one = "Mars"
+str_two = 'is the best dog'
+my_three = "in the world!!!"
 
-# # print(len(dog_one)
+# print(len(dog_one)
 
-# #Create One String From Multiple Strings
-#   # ex: 
-#   # string1 = "the"
-#   # string2 = "dog"
-#   # output => "the dog"  
-# print(dog_one + ' ' + dog_two + ' ' + dog_three)
+#Create One String From Multiple Strings
+  # ex: 
+  # string1 = "the"
+  # string2 = "dog"
+  # output => "the dog"  
+print(dog_one + ' ' + str_two + ' ' + my_three)
 
-# # Find the Length of a String
-# # ex: "The" => 3
+# Find the Length of a String
+# ex: "The" => 3
 
-# print(len(dog_one))
-# mystring = "The good old dog is great and loved"
-# myString = input()
-# newString = (myString[1:len(myString)-1])
-# newString[0] = myString[len(myString)-1]
-# newString[len(newString)-1] = myString[0]
-# print(newString)
+print(len(dog_one))
+
+# Challenge: Reverse a word
+# EX: "reverse" = "esrever"
+reverse = dog_one[::-1]
+print(reverse)
+
