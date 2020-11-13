@@ -4,7 +4,7 @@
 # "ABCD" => "DBCA"
 # "WINDOWS" => "SINDOWW"
 new_string = "Jacob"
-swapped_string = new_string[0:-1].replace('J', 'b') + new_string[0]
+swapped_string = new_string[0:-1].replace(new_string[0], new_string[-1]) + new_string[0]
 print(swapped_string)
 
 
