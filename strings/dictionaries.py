@@ -42,17 +42,48 @@
 # print(featured_team)
 
 # Python Dictionary View Objects you dont have to understand them you just know how to work with them and see them 
-players = {
-  "ss" : "Correa",
-  "2b" : "Altuve",
-  "3b" : "Bregman",
-  "DH" : "Gattis",
-  "OF" : "Springer",
-}
-# this is way to cast the dictionary view to a list  and then you can manipulate it and make it thread safe, so you dont
-# compromise the original list this is only stored and access for us to use even if someone is updating it .. 
-#brings this back in a tuple 
-player_names = list(players.copy().values())
+# players = {
+#   "ss" : "Correa",
+#   "2b" : "Altuve",
+#   "3b" : "Bregman",
+#   "DH" : "Gattis",
+#   "OF" : "Springer",
+# }
+# # this is way to cast the dictionary view to a list  and then you can manipulate it and make it thread safe, so you dont
+# # compromise the original list this is only stored and access for us to use even if someone is updating it .. 
+# #brings this back in a tuple 
+# player_names = list(players.copy().values())
+
+# teams = {
+#   "astros" : ["Altuve", "Correa", "Bregman"],
+#   "angels":  ["Trout", "Pujols"],
+#   "yankees": ["Judge", "Stanton"],
+#   "red sox": ["Price", "Betts"],
+# }
+# #value vs refrence later in the program 
+# # this will return a tuple and it will say dict_items in front of it to know that its veiw objects
+# team_groupings = teams.items()
+
+# """
+# [
+#   ('astros', ['Altuve', 'Correa', 'Bregman']),
+#   ('angels', ['Trout', 'Pujols']),
+#   ('yankees', ['Judge', 'Stanton']),
+#   ('red sox', ['Price', 'Betts'])
+# ]
+# """
+
+# print(list(team_groupings))
+# #this is what is returned when you cast list to team_groupings 
+# """
+# [('astros',['Altuve','Correa','Bregman']),
+# ('angels',['Trout','Pujols']),
+# ('yankees',['Judge','Stanton']),
+# ('red sox',['Price','Betts'])]
+# """
+# print(list(team_groupings)[1][1][1])
+# adding to the dictionary is name['key'] = 'new value'
+#how to delete data from the dictionary  two ways delete and pop 
 
 teams = {
   "astros" : ["Altuve", "Correa", "Bregman"],
@@ -60,25 +91,9 @@ teams = {
   "yankees": ["Judge", "Stanton"],
   "red sox": ["Price", "Betts"],
 }
-#value vs refrence later in the program 
-# this will return a tuple and it will say dict_items in front of it to know that its veiw objects
-team_groupings = teams.items()
+# Deletes it from the dictionary and would throw an error if you didnt have the key in the dictonary 
+del teams['angels']
+removed_team = teams.pop('mets', 'Team not found')
 
-"""
-[
-  ('astros', ['Altuve', 'Correa', 'Bregman']),
-  ('angels', ['Trout', 'Pujols']),
-  ('yankees', ['Judge', 'Stanton']),
-  ('red sox', ['Price', 'Betts'])
-]
-"""
-
-print(list(team_groupings))
-#this is what is returned when you cast list to team_groupings 
-"""
-[('astros',['Altuve','Correa','Bregman']),
-('angels',['Trout','Pujols']),
-('yankees',['Judge','Stanton']),
-('red sox',['Price','Betts'])]
-"""
-print(list(team_groupings)[1][1][1])
+print(teams)
+print(removed_team)
