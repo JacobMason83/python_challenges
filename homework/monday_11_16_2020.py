@@ -4,8 +4,8 @@ import operator
 # EX: [1, 2, 3] => 6
 # I want at least 2 solutions here, but shoot for three different answers here:
 def sum_numbers(li): # 1 method and defining the function
-    # use the reduce method to add them together and sort the list 
-    return (reduce(lambda a , b: a + b , sorted(li)))
+    # use the reduce method to add them together 
+    return (reduce(lambda a , b: a + b , li))
 # print the function 
 print(sum_numbers([1,2,3,4,5,6]))
 
@@ -20,7 +20,7 @@ def add_numbers(li): # 2 define the function
     
    
 
-print(add_numbers([1,2,3,4,5,6]))
+print(add_numbers([1,2,3,4,5,6])) 
 
 
 
