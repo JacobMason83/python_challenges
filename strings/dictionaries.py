@@ -85,15 +85,38 @@
 # adding to the dictionary is name['key'] = 'new value'
 #how to delete data from the dictionary  two ways delete and pop 
 
-teams = {
-  "astros" : ["Altuve", "Correa", "Bregman"],
-  "angels":  ["Trout", "Pujols"],
-  "yankees": ["Judge", "Stanton"],
-  "red sox": ["Price", "Betts"],
-}
-# Deletes it from the dictionary and would throw an error if you didnt have the key in the dictonary 
-del teams['angels']
-removed_team = teams.pop('mets', 'Team not found')
+# teams = {
+#   "astros" : ["Altuve", "Correa", "Bregman"],
+#   "angels":  ["Trout", "Pujols"],
+#   "yankees": ["Judge", "Stanton"],
+#   "red sox": ["Price", "Betts"],
+# }
+# # Deletes it from the dictionary and would throw an error if you didnt have the key in the dictonary 
+# del teams['angels']
+# removed_team = teams.pop('mets', 'Team not found')
 
-print(teams)
-print(removed_team)
+# print(teams)
+# print(removed_team)
+# guid to nested items in dictionaries 
+#teams is a list with multiple dictionaries and fir
+teams = [
+  {
+    'astros': {
+      '2B': 'Altuve', # these are going to be exactly like you will be using in api data and stuff like that 
+      'SS': 'Correa',
+      '3B': 'Bregman',
+    }
+  },
+  {
+    'angels': {
+      'OF': 'Trout',
+      'DH': 'Pujols',
+    }
+  }
+]
+
+# print(teams[0]) and would return astros dictionary 
+
+angels = teams[1].get('angels', 'Team not found') #be a good dev and set a default to error check 
+# this is going to show a "dictionary view of the list "  
+print(list(angels.values())[1])
