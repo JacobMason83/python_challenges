@@ -4,12 +4,21 @@ from random import randint
 global bet
 global wallet
 #place your bet
+# def new_bet():
+#     global bet
+#     global wallet
+    
+#     bet = int(input('Place your bet: '))
+#     if bet > wallet:
+#         print(f'Your wallet is at {wallet} please change your bet')
+#         return start()
+    
 def start():
   global bet  
   global wallet
   wallet = 1500
   bet = int(input('Place your bet: '))
-  print (f'You start out with: {wallet}  and you have placed a bet of: {bet}')
+  print(f'You start out with: {wallet}  and you have placed a bet of: {bet}')
   return start_game(who_wins())
 
 #deal the cards 
@@ -65,7 +74,8 @@ def restart_options(choice):
         print('Thank you for playing my game today I hope you enjoyed my hard work!!!')
         return exit()
 
-#need to add a bet feature that says if you try and bet more than what you have then if you have a negative balance you owe me 
+#need to add a bet feature that says if you try and bet more than
+#  what you have then if you have a negative balance you owe me 
 
 start()
 
