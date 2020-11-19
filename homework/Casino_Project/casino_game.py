@@ -1,8 +1,12 @@
 # make a game that i can make a bet on on black Jack
 import random
 from random import randint
+import homework
+from homework import gui
 global bet
-global wallet
+global wallet 
+wallet = 1500
+
 #place your bet
 # def new_bet():
 #     global bet
@@ -16,7 +20,8 @@ global wallet
 def start():
   global bet  
   global wallet
-  wallet = 1500
+#   wallet = 1500
+  print(f'You have {wallet} in your wallet, place your bet accordingly')
   bet = int(input('Place your bet: '))
   if bet > wallet : 
     print(f'If you bet {bet} lose youll owe me money, why dont you try again')
