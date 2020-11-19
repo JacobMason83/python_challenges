@@ -22,7 +22,7 @@ def start():
   global wallet
 #   wallet = 1500
   print(f'You have {wallet} in your wallet, place your bet accordingly')
-  bet = int(input('Place your bet: '))
+  bet = float(input('Place your bet: '))
   if bet > wallet : 
     print(f'If you bet {bet} lose youll owe me money, why dont you try again')
     return start()
@@ -54,12 +54,12 @@ def who_wins():
     user = user_card()
     global bet
     global wallet
-    print("""
+    print(f"""
           ____________________________________
-          |                      _________   |
+          |                      __Total__   |
           |                      |A      |   |
           |  DEALING             |       |   |
-          |                      |       |   |
+          |  Cards!!!            |       |   |
           |                      |_______|   |
           |                                  |
           |__________________________________|
@@ -68,6 +68,17 @@ def who_wins():
     # conditionals if dealer wins , user wins  then ask if they want to play again 
     if dealer > user:
        wallet -= bet
+       print(f"""
+          ____________________________________
+          |                      _Total___   |
+          |                      |        |  |
+          |  You Lost!!!         | Card   |  |
+          |                      | Value  |  |
+          |                      |________|  |
+          |                                  |
+          |__________________________________|
+            The dealers total is: {dealer}
+          """)
        print( f'You lost to the dealers {dealer} and you won: {user_bet} and your wallet is now {wallet}')   
        choice = str((input('Would you like to try and beat my program again?')))  
        return restart_options(choice)
@@ -75,6 +86,17 @@ def who_wins():
     elif user == dealer:
         user_winnings = bet
         wallet += user_bet
+        print(f"""
+          ____________________________________
+          |                      _Your ___   |
+          |                      |        |  |
+          |  You Tied$$$$        |        |  |
+          |                      |        |  |
+          |                      |________|  |
+          |                                  |
+          |__________________________________|
+            Your total is {user} and the Dealers is {dealer}
+          """)
         print( f'You tied with dealer with{user} you won: {user_winnings} and your wallet is now {wallet}')
         choice = str((input('Would you like to try and beat my program again?')))
         return restart_options(choice)
@@ -82,6 +104,17 @@ def who_wins():
     else:
         user_winnings = bet * 2.5
         wallet += user_winnings
+        print(f"""
+          ____________________________________
+          |                      __Your__    |
+          |                      | total |   |
+          |  You Won$$$$         | card  |   |
+          |                      |       |   |
+          |                      |_______|   |
+          |                                  |
+          |__________________________________|
+           Your Won  {user_winnings}$$$$$$$$$
+          """)
         print(f'You won with {user} and you won:  {user_winnings} and your wallet is now {wallet}')
         choice = str((input('Would you like to try and beat my program again?')))
         return restart_options(choice)       
@@ -90,11 +123,15 @@ def who_wins():
 def restart_options(choice):
     global bet
     global wallet
+   
     if ((choice == 'y') or (choice == 'yes')):
       return start()
-    else:
-        print('Thank you for playing my game today I hope you enjoyed my hard work!!!')
+    elif (choice.lower() == 'no') or (choice.lower() == 'n'):
+        print('Thank you for playing my game today, I made this game for people to enjoy, I hope you enjoyed my hard work!!!')
         return exit()
+    else:
+        print("You didnt put a yes or no , Time to play a game!!!! ")
+        return start()
 
 #need to add a bet feature that says if you try and bet more than
 #  what you have then if you have a negative balance you owe me 

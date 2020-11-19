@@ -18,6 +18,7 @@ canvas.pack()
 frame = tk.Frame(main, bg='red')
 frame.place(relheight=0.5, relwidth=0.5 )
 
-restart_message = tk.messagebox.askquestion(main, title='start_game', message='choice' command='restart()')
-restart_message.pack()
+# restart_message = tk.messagebox.askquestion(main, title='start_game', message='choice' command='restart()')
+# restart_message.pack()
 main.mainloop()
+
