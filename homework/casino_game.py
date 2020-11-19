@@ -18,16 +18,23 @@ def start():
   global wallet
   wallet = 1500
   bet = int(input('Place your bet: '))
-  print(f'You start out with: {wallet}  and you have placed a bet of: {bet}')
-  return start_game(who_wins())
+  if bet > wallet : 
+    print(f'If you bet {bet} lose youll owe me money, why dont you try again')
+    return start()
+      
+  else:
+      print(f'You start out with: {wallet}  and you have placed a bet of: {bet}')
+      return start_game(who_wins())
 
 #deal the cards 
 def user_card():
     value = random.randint(0, 21)
+    print(f"Your total is:  {value}")
     return value
 
 def dealer_card():
     value = random.randint(0, 21)
+    print(f"The Dealers total is:  {value}")
     return value
 #set the function for the restart function if they say yes by starting it over again 
 
@@ -46,7 +53,7 @@ def who_wins():
     # conditionals if dealer wins , user wins  then ask if they want to play again 
     if dealer > user:
        wallet -= bet
-       print( f'You lost to the dealers {dealer} and you won{user_bet} and your wallet is now {wallet}')   
+       print( f'You lost to the dealers {dealer} and you won: {user_bet} and your wallet is now {wallet}')   
        choice = str((input('Would you like to try and beat my program again?')))  
        return restart_options(choice)
        
@@ -60,7 +67,7 @@ def who_wins():
     else:
         user_winnings = bet * 2.5
         wallet += user_winnings
-        print(f'You won with {user} and you won{user_winnings} and your wallet is now {wallet}')
+        print(f'You won with {user} and you won:  {user_winnings} and your wallet is now {wallet}')
         choice = str((input('Would you like to try and beat my program again?')))
         return restart_options(choice)       
          
