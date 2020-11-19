@@ -1,8 +1,8 @@
 # make a game that i can make a bet on on black Jack
 import random
 from random import randint
-import homework
-from homework import gui
+# import homework
+# from homework import gui
 global bet
 global wallet 
 wallet = 1500
@@ -54,6 +54,16 @@ def who_wins():
     user = user_card()
     global bet
     global wallet
+    print("""
+          ____________________________________
+          |                      _________   |
+          |                      |A      |   |
+          |  DEALING             |       |   |
+          |                      |       |   |
+          |                      |_______|   |
+          |                                  |
+          |__________________________________|
+          """)
     user_bet = bet    
     # conditionals if dealer wins , user wins  then ask if they want to play again 
     if dealer > user:
