@@ -4,6 +4,7 @@ from tkinter.commondialog import Dialog
 from tkinter import Canvas
 from tkinter import *
 from tkinter.ttk import *
+
 # class Game(tk.Frame):
     # def __init__(self):
     #     tk.Frame.__init__(self)
