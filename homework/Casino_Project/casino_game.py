@@ -80,7 +80,7 @@ def who_wins():
             The dealers total is: {dealer}
           """)
        print( f'You lost to the dealers {dealer} and you won: {user_bet} and your wallet is now {wallet}')   
-       choice = str((input('Would you like to try and beat my program again?')))  
+       choice = str((input('Would you like to try and beat my program again?: (y/n)')))  
        return restart_options(choice)
        
     elif user == dealer:
@@ -98,7 +98,7 @@ def who_wins():
             Your total is {user} and the Dealers is {dealer}
           """)
         print( f'You tied with dealer with{user} you won: {user_winnings} and your wallet is now {wallet}')
-        choice = str((input('Would you like to try and beat my program again?')))
+        choice = str((input('Would you like to try and beat my program again?: (y/n')))
         return restart_options(choice)
                
     elif user == 21:
@@ -116,7 +116,7 @@ def who_wins():
            Your Won  {user_winnings}$$$$$$$$$
           """)
         print(f' You hit a BlackJack , You won with {user} and/n you won:  {user_winnings} and your wallet is now {wallet}')
-        choice = str((input('Would you like to try and beat my program again?')))
+        choice = str((input('Would you like to try and beat my program again?: (y/n)')))
         return restart_options(choice)       
     else:
         user_winnings = bet
@@ -133,7 +133,7 @@ def who_wins():
            Your Won  {user_winnings}$$$$$$$$$
           """)
         print(f'You won with {user} and you won:  {user_winnings} and your wallet is now {wallet}')
-        choice = str((input('Would you like to try and beat my program again?')))
+        choice = str((input('Would you like to try and beat my program again?: (y/n)')))
         return restart_options(choice)
 
 def restart_options(choice):
