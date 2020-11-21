@@ -21,10 +21,9 @@ def hypen_string(string):
     li_two = []
     for i in string:
         count += 1
-        if count:            
-        #   li = '-'.join(count * i).capitalize()   
-          
-         return li_two 
-    return li_two.append("-".join(count * i).capitalize())
+        li_two.append(str(count * i).capitalize())          
+        
+    return'-'.join(li_two)  
+         
 print(hypen_string('abcdefg'))
     
