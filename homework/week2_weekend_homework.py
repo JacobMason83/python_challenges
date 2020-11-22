@@ -16,14 +16,25 @@
 # IE:  "abcd" => "A-Bb-Ccc-Dddd"
 #      "RqaEzTy" => "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 
-def hypen_string(string):
+def hyphen_accumalator(string): # the name of the function im running the process thru 
+    #setting the count of the accumulator
     count = 0
+    # making an empty list  for appending my string 
     li_two = []
+    # running the for loop on the string 
     for i in string:
+        # adding to the count every iteration 
         count += 1
+        # appending to the list  the count at the iteration moment and multiplying it by the char at i , and then capitalizing it 
         li_two.append(str(count * i).capitalize())          
-        
+        # returned the joined list and returning it 
     return'-'.join(li_two)  
          
-print(hypen_string('abcdefg'))
-    
+print(hyphen_accumalator('abcdefg'))
+print(hyphen_accumalator('johnny'))
+print(hyphen_accumalator('ryan'))
+print(hyphen_accumalator('donald'))
+
+
+
+
