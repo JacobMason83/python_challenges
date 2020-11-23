@@ -5,7 +5,8 @@
 # def greeting(name, last = 'is a cool cat'):
 #     print(f'Hi {name}{last}')
      
-# print(greeting('Jacob')) // will print Jacob is a cool cat
+# print(greeting('Jacob')) // will print Jacob is a cool cat is a just in case they forget or dont put it in this will print
+
 # # What is a named argument? a named arguement is a as it sounds its named so when you call the greeting function i would say name="jacob" last="Mason"
 # # What does the *args  do in a python function and how might you use it? args allows for more than one thing to be in that argument it basically unpacks everything that you put into it thats what the * does
 # # What are Keyword Arguments in Python? keyword args are keywords or *kwargs and is used when you dont know what your 
