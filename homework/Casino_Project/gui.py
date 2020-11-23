@@ -1,4 +1,5 @@
-from homework import *
+import sys
+sys.insert(0, './lib')
 import tkinter as tk
 from tkinter import commondialog
 from tkinter.commondialog import Dialog
