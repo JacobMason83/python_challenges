@@ -34,3 +34,17 @@ print(google._total)
 print(google._client)
 google.client = 'Yahoo'
 print(google._client)
+#overview of dunder method aka magic methods 
+# the double underscore had to do with the private and protected methods, unlike in other languages they have private methods or protected methods
+# and they would have limited visability in anything outside of the class itself 
+# dunder str 
+class Invoice:
+    def __init__(self, client, total):
+        self.client = client
+        self.total = total
+        
+    def __str__(self): #this is used usally for helping debug the class , helpful way to get information on the class 
+        return f'Invoice from {self.client} for {self.total}'
+    
+inv = Invoice('Google', 500)
+print(str(inv))
